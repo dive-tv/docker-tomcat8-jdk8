@@ -6,7 +6,7 @@ ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
 
-ENV TOMCAT_VERSION 8.0.41
+ENV TOMCAT_VERSION 8.0.45
 
 # Install dependencies
 RUN apt-get update && apt-get install -y git build-essential curl wget software-properties-common
@@ -29,6 +29,3 @@ RUN wget --quiet --no-cookies http://apache.rediris.es/tomcat/tomcat-8/v${TOMCAT
 	rm -rf /usr/local/tomcat/webapps/ROOT
 
 WORKDIR $CATALINA_HOME
-
-EXPOSE 8080
-CMD ["catalina.sh", "run"]
