@@ -6,7 +6,7 @@ ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
 
-ENV TOMCAT_VERSION 8.0.45
+ENV TOMCAT_VERSION 8.0.47
 
 # Install dependencies
 RUN apt-get update && apt-get install -y git build-essential curl wget software-properties-common
